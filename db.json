@@ -8,5 +8,22 @@
       "id": 2,
       "name": "Jenny"
     }
+  ],
+  "pages": [
+    {
+      "id": 1,
+      "title": "Page One",
+      "author": 1
+    },
+    {
+      "id": 2,
+      "title": "Page Two",
+      "author": 1
+    },
+    {
+      "id": 3,
+      "title": "Page Three",
+      "author": 2
+    }
   ]
 }

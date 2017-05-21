@@ -3,12 +3,18 @@ import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
-  state = {users: []}
+  state = {
+    users: [],
+    pages: [],
+  }
 
   componentDidMount() {
     fetch('/users')
       .then(res => res.json())
       .then(users => this.setState({ users: users }));
+    fetch('/pages?author=1')
+      .then(res => res.json())
+      .then(pages => this.setState({ pages: pages }));
   }
 
   render() {
@@ -17,6 +23,11 @@ class App extends Component {
         <h1>Users</h1>
         {this.state.users.map(user =>
           <div key={user.id}>{user.name}</div>
+        )}
+        <h2>Pages</h2>
+        {
+          this.state.pages.map(page =>
+            <div key={page.id}>{page.title}</div>
         )}
       </div>
     );
