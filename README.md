@@ -1,6 +1,7 @@
 # Links
 - [Frontend + Backend](https://daveceddia.com/create-react-app-express-backend/)
 - [More](https://www.fullstackreact.com/articles/using-create-react-app-with-a-server/)
+- [Create React App + Redux](http://www.penta-code.com/how-to-add-redux-to-create-react-app/)
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).

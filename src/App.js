@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+import Cart from './components/cart';
+
 class App extends Component {
   state = {
     users: [],
@@ -29,6 +31,7 @@ class App extends Component {
           this.state.pages.map(page =>
             <div key={page.id}>{page.title}</div>
         )}
+        <Cart />
       </div>
     );
   }
