@@ -5,12 +5,6 @@ import * as CartActions from '../actions/cart';
 import Shelf from './shelf';
 
 class Cart extends Component {
-  state = {
-    users: [],
-    pages: [],
-  }
-
-
   render() {
     const CartItems = this.props.cart.map((item, index) => {
       return <li key={index}>{item}</li>
