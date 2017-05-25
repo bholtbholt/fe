@@ -14,7 +14,8 @@ export function fetchPages(clientId) {
   }
 }
 
-export default(state = [], action) => {
+const init = [];
+export default(state = init, action) => {
   switch (action.type) {
     case FETCH_PAGES_SUCCESS:
       return action.pages;

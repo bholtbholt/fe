@@ -6,7 +6,12 @@ export const setCurrentClient = (client) => {
   }
 }
 
-export default(state = { id: 0 }, action) => {
+const init = {
+  id: 1,
+  name: "Client A",
+  userId: 1
+}
+export default(state = init, action) => {
   switch (action.type) {
     case SET_CURRENT_CLIENT:
       return action.client;
