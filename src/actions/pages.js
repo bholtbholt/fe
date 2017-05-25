@@ -1,17 +1,16 @@
-export function fetchPages(userId) {
+export const FETCH_PAGES_SUCCESS = 'FETCH_PAGES_SUCCESS';
+export const fetchPagesSuccess = (pages) => {
+  return {
+    type: FETCH_PAGES_SUCCESS,
+    pages
+  };
+}
+
+export function fetchPages(clientId) {
   return function(dispatch) {
-    return fetch(`/pages?author=${userId}`)
+    return fetch(`/clients/${clientId}/pages`)
       .then(response => response.json())
       .then(pages => dispatch(fetchPagesSuccess(pages)))
   }
 }
 
-export const FETCH_PAGES_SUCCESS = 'FETCH_PAGES_SUCCESS';
-export const fetchPagesSuccess = (pages) => {
-  return {
-    type: FETCH_PAGES_SUCCESS,
-    pages,
-    posts: pages,
-    recievedAt: Date.now()
-  };
-}

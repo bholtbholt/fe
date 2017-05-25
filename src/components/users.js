@@ -22,7 +22,7 @@ class User extends Component {
   render() {
     return (
       <div className="User">
-        <h2>Pick User</h2>
+        <h2>Login as:</h2>
         {
           this.state.users.map(user =>
             <button
