@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import * as UserActions from '../reducers/Login';
+import * as LoginActions from '../reducers/Login';
 
-class User extends Component {
+class Login extends Component {
   onClickLogin = this.onClickLogin.bind(this);
   onClickLogin(userObject) {
     this.props.action.login(userObject)
@@ -21,7 +21,7 @@ class User extends Component {
 
   render() {
     return (
-      <div className="User">
+      <div className="Login">
         <h2>Login as:</h2>
         {
           this.state.users.map(user =>
@@ -45,8 +45,8 @@ function mapStateToProps(state, prop) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    action: bindActionCreators(UserActions, dispatch)
+    action: bindActionCreators(LoginActions, dispatch)
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(User);
+export default connect(mapStateToProps, mapDispatchToProps)(Login);

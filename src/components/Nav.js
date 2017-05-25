@@ -9,9 +9,10 @@ class Nav extends Component {
         <li><Link to='/pages'>Pages</Link></li>
         <li>Overlays</li>
         <li>Sticky Footers</li>
-        <li><Link to='/users'>Users</Link></li>
         <li>Domains</li>
+        <li>Users</li>
         <li><Link to='/client-list'>Clients</Link></li>
+        <li><Link to='/login'>Login</Link></li>
       </ul>
     );
   }

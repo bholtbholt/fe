@@ -3,14 +3,14 @@ import { connect } from 'react-redux';
 import { Switch, Route, withRouter } from 'react-router-dom';
 import Nav from './components/Nav'
 
-import Users from './components/Users';
+import Login from './components/Login';
 import ClientsList from './components/ClientsList';
 import Pages from './components/Pages';
 
 class App extends Component {
   renderLoginPrompt() {
     if (this.props.user.id === 0) {
-      return <Users />
+      return <Login />
     }
   }
 
@@ -22,7 +22,7 @@ class App extends Component {
         <Switch>
           <Route path='/pages' component={Pages}/>
           <Route path='/client-list' component={ClientsList}/>
-          <Route path='/users' component={Users}/>
+          <Route path='/login' component={Login}/>
         </Switch>
       </div>
     );
