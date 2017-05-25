@@ -2,28 +2,87 @@
   "users": [
     {
       "id": 1,
-      "name": "Brian"
+      "name": "User A",
+      "clientId": [1, 2]
     },
     {
       "id": 2,
-      "name": "Jenny"
+      "name": "User B",
+      "clientId": [2, 3, 4]
+    }
+  ],
+  "clients": [
+    {
+      "id": 1,
+      "name": "Client A",
+      "userId": 1
+    },
+    {
+      "id": 2,
+      "name": "Client B",
+      "userId": [1, 2]
+    },
+    {
+      "id": 3,
+      "name": "Client C",
+      "userId": 2
+    },
+    {
+      "id": 4,
+      "name": "Client D",
+      "userId": 2
     }
   ],
   "pages": [
     {
       "id": 1,
-      "title": "Page One",
-      "author": 1
+      "title": "Page 1",
+      "clientId": 1
     },
     {
       "id": 2,
-      "title": "Page Two",
-      "author": 1
+      "title": "Page 2",
+      "clientId": 1
     },
     {
       "id": 3,
-      "title": "Page Three",
-      "author": 2
+      "title": "Page 3",
+      "clientId": 2
+    },
+    {
+      "id": 4,
+      "title": "Page 4",
+      "clientId": 2
+    },
+    {
+      "id": 5,
+      "title": "Page 5",
+      "clientId": 2
+    },
+    {
+      "id": 6,
+      "title": "Page 6",
+      "clientId": 2
+    },
+    {
+      "id": 7,
+      "title": "Page 7",
+      "clientId": 3
+    },
+    {
+      "id": 8,
+      "title": "Page 8",
+      "clientId": 4
+    },
+    {
+      "id": 9,
+      "title": "Page 9",
+      "clientId": 4
+    },
+    {
+      "id": 10,
+      "title": "Page 10",
+      "clientId": 4
     }
   ]
 }

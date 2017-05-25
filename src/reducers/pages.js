@@ -1,6 +1,4 @@
-import {
-  FETCH_PAGES_SUCCESS
-} from '../actions/pages';
+import { FETCH_PAGES_SUCCESS } from '../actions/pages';
 
 export default(state = [], action) => {
   switch (action.type) {

@@ -1,10 +1,12 @@
 import { combineReducers } from 'redux';
 import user from './user';
 import pages from './pages';
+import clients from './clients';
 
 const feApp = combineReducers({
   user,
-  pages
+  pages,
+  clients
 });
 
 export default feApp;
