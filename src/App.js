@@ -1,18 +1,30 @@
 import React, { Component } from 'react';
-import User from './components/users';
-import Pages from './components/pages';
-import Clients from './components/clients';
+import { connect } from 'react-redux';
+import User from './components/Users';
+import ClientsList from './components/ClientsList';
 
 class App extends Component {
   render() {
-    return (
-      <div className="App">
-        <User />
-        <Pages />
-        <Clients />
-      </div>
-    );
+    if (this.props.user.id === 0) {
+      return (
+        <div className="App">
+          <User />
+        </div>
+      );
+    } else {
+      return (
+        <div className="App">
+          <ClientsList />
+        </div>
+      );
+    }
   }
 }
 
-export default App;
+function mapStateToProps(state, prop) {
+  return {
+    user: state.currentUser
+  }
+}
+
+export default connect(mapStateToProps)(App);

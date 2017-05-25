@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import * as UserActions from '../actions/user';
+import * as UserActions from '../reducers/Login';
 
 class User extends Component {
   onClickLogin = this.onClickLogin.bind(this);
-  onClickLogin(user) {
-    this.props.action.login(user)
+  onClickLogin(userObject) {
+    this.props.action.login(userObject)
   }
 
   componentDidMount() {
@@ -39,7 +39,7 @@ class User extends Component {
 
 function mapStateToProps(state, prop) {
   return {
-    user: state.login
+    user: state.currentUser
   }
 }
 

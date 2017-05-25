@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import * as PagesActions from '../actions/pages';
+import * as PagesActions from '../reducers/Pages';
 
 class Pages extends Component {
   onClickFetchPages = this.onClickFetchPages.bind(this);
@@ -30,7 +30,7 @@ class Pages extends Component {
 function mapStateToProps(state, prop) {
   return {
     pages: state.pages,
-    user: state.user
+    user: state.currentUser
   }
 }
 

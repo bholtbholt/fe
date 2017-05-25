@@ -1,10 +1,12 @@
 import { combineReducers } from 'redux';
-import user from './user';
-import pages from './pages';
-import clients from './clients';
+import currentUser from './Login';
+import pages from './Pages';
+import clients from './ClientsList';
+import currentClient from './ClientsSetCurrent';
 
 const feApp = combineReducers({
-  user,
+  currentUser,
+  currentClient,
   pages,
   clients
 });
