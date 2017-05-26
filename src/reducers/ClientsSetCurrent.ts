@@ -1,4 +1,11 @@
 import { Client } from '../commonTypes';
+export type Action =
+  SetCurrentClient;
+
+export interface SetCurrentClient {
+  type: typeof SET_CURRENT_CLIENT;
+  client: Client;
+}
 
 // Actions
 
@@ -9,16 +16,6 @@ export const setCurrentClient = (client): SetCurrentClient => {
     client
   };
 };
-
-// Types
-
-export type Action =
-  SetCurrentClient;
-
-export interface SetCurrentClient {
-  type: typeof SET_CURRENT_CLIENT;
-  client: Client;
-}
 
 // Reducer
 

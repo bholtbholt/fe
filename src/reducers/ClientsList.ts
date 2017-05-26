@@ -1,4 +1,11 @@
 import { UserId, Client } from '../commonTypes';
+export type Action =
+  FetchClientsSuccess;
+
+export interface FetchClientsSuccess {
+  type: typeof FETCH_CLIENTS_SUCCESS;
+  clients: Client[];
+}
 
 // Actions
 
@@ -16,16 +23,6 @@ export function fetchClients(userId: UserId) {
       .then(response => response.json())
       .then(clients => dispatch(fetchClientsSuccess(clients)));
   };
-}
-
-// Types
-
-export type Action =
-  FetchClientsSuccess;
-
-export interface FetchClientsSuccess {
-  type: typeof FETCH_CLIENTS_SUCCESS;
-  clients: Client[];
 }
 
 // Reducer

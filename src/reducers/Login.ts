@@ -1,4 +1,11 @@
 import { User } from '../commonTypes';
+export type Action =
+  Login;
+
+export interface Login {
+  type: typeof LOGIN;
+  user: User;
+}
 
 // Actions
 
@@ -9,16 +16,6 @@ export const login = (user): Login => {
     user
   };
 };
-
-// Types
-
-export type Action =
-  Login;
-
-export interface Login {
-  type: typeof LOGIN;
-  user: User;
-}
 
 // Reducer
 
