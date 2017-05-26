@@ -1,14 +1,22 @@
-import React, { Component } from 'react';
+import { Page, User, Client } from '../commonTypes';
+import * as React from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import * as PagesActions from '../reducers/Pages';
+import { fetchPages } from '../reducers/Pages';
 
-class Pages extends Component {
-  componentDidMount() {
-    this.props.action.fetchPages(this.props.currentClient.id)
+export interface Props {
+  pages: Page[];
+  user: User;
+  currentClient: Client;
+  action: typeof fetchPages;
+}
+
+class Pages extends React.Component<Props, null> {
+  public componentDidMount() {
+    this.props.action(this.props.currentClient.id);
   }
 
-  render() {
+  public render() {
     return (
       <div className="Pages">
         <h2>Pages</h2>
@@ -27,13 +35,13 @@ function mapStateToProps(state, prop) {
     pages: state.pages,
     user: state.currentUser,
     currentClient: state.currentClient
-  }
+  };
 }
 
 function mapDispatchToProps(dispatch) {
   return {
-    action: bindActionCreators(PagesActions, dispatch)
-  }
+    action: bindActionCreators(fetchPages, dispatch)
+  };
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Pages);
