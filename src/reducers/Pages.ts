@@ -1,4 +1,7 @@
 import { Page, ClientId } from '../commonTypes';
+
+export const FETCH_PAGES_SUCCESS = 'FETCH_PAGES_SUCCESS';
+
 export type Action =
   FetchPagesSuccess;
 
@@ -9,7 +12,6 @@ export interface FetchPagesSuccess {
 
 // Actions
 
-export const FETCH_PAGES_SUCCESS = 'FETCH_PAGES_SUCCESS';
 export const fetchPagesSuccess = (pages): FetchPagesSuccess => {
   return {
     type: FETCH_PAGES_SUCCESS,

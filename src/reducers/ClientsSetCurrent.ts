@@ -1,4 +1,7 @@
 import { Client } from '../commonTypes';
+
+export const SET_CURRENT_CLIENT = 'SET_CURRENT_CLIENT';
+
 export type Action =
   SetCurrentClient;
 
@@ -9,7 +12,6 @@ export interface SetCurrentClient {
 
 // Actions
 
-export const SET_CURRENT_CLIENT = 'SET_CURRENT_CLIENT';
 export const setCurrentClient = (client): SetCurrentClient => {
   return {
     type: SET_CURRENT_CLIENT,
@@ -32,3 +34,7 @@ export default (state = init, action: Action) => {
       return state;
   }
 };
+
+
+// CHANGING THE CURRENT CLIENT SHOULD RESET THE STORE
+// Pages = Pages[], for example

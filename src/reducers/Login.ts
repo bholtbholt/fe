@@ -1,4 +1,7 @@
 import { User } from '../commonTypes';
+
+export const LOGIN = 'LOGIN';
+
 export type Action =
   Login;
 
@@ -9,7 +12,6 @@ export interface Login {
 
 // Actions
 
-export const LOGIN = 'LOGIN';
 export const login = (user): Login => {
   return {
     type: LOGIN,

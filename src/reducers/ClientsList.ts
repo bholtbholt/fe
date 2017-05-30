@@ -1,4 +1,7 @@
 import { UserId, Client } from '../commonTypes';
+
+export const FETCH_CLIENTS_SUCCESS = 'FETCH_CLIENTS_SUCCESS';
+
 export type Action =
   FetchClientsSuccess;
 
@@ -9,7 +12,6 @@ export interface FetchClientsSuccess {
 
 // Actions
 
-export const FETCH_CLIENTS_SUCCESS = 'FETCH_CLIENTS_SUCCESS';
 export const fetchClientsSuccess = (clients): FetchClientsSuccess => {
   return {
     type: FETCH_CLIENTS_SUCCESS,
